@@ -39,6 +39,12 @@
     <ClCompile Include="src\lve_game_object.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\lve_renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simple_render_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\first_app.hpp">
@@ -62,13 +68,18 @@
     <ClInclude Include="src\lve_game_object.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\lve_renderer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\simple_render_system.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="compile.bat">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="delete_compiled.bat">
-      <Filter>Source Files</Filter>
-    </None>
+    <None Include="src\shaders\simple_shader.frag" />
+    <None Include="src\shaders\simple_shader.vert" />
   </ItemGroup>
 </Project>

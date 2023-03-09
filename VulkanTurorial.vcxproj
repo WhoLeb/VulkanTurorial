@@ -167,6 +167,8 @@ call compile.bat</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\simple_render_system.cpp" />
+    <ClCompile Include="src\lve_renderer.cpp" />
     <ClCompile Include="src\lve_game_object.cpp" />
     <ClCompile Include="src\lve_model.cpp" />
     <ClCompile Include="src\first_app.cpp" />
@@ -177,6 +179,8 @@ call compile.bat</Command>
     <ClCompile Include="src\lve_swap_chain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\simple_render_system.hpp" />
+    <ClInclude Include="src\lve_renderer.hpp" />
     <ClInclude Include="src\lve_game_object.hpp" />
     <ClInclude Include="src\lve_model.hpp" />
     <ClInclude Include="src\first_app.hpp" />
@@ -187,7 +191,8 @@ call compile.bat</Command>
   </ItemGroup>
   <ItemGroup>
     <None Include="compile.bat" />
-    <None Include="delete_compiled.bat" />
+    <None Include="src\shaders\simple_shader.frag" />
+    <None Include="src\shaders\simple_shader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
