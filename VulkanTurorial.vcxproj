@@ -70,6 +70,14 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <CustomBuildBeforeTargets />
+    <CustomBuildAfterTargets />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <CustomBuildBeforeTargets />
+    <CustomBuildAfterTargets />
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -118,8 +126,13 @@
       </Command>
     </CustomBuildStep>
     <PreBuildEvent>
-      <Command>compile.bat</Command>
+      <Command>cd $(SolutionDir)
+call compile.bat</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -145,10 +158,16 @@
       </Command>
     </CustomBuildStep>
     <PreBuildEvent>
-      <Command>compile.bat</Command>
+      <Command>cd $(SolutionDir)
+call compile.bat</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\lve_game_object.cpp" />
     <ClCompile Include="src\lve_model.cpp" />
     <ClCompile Include="src\first_app.cpp" />
     <ClCompile Include="src\lve_device.cpp" />
@@ -158,12 +177,17 @@
     <ClCompile Include="src\lve_swap_chain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\lve_game_object.hpp" />
     <ClInclude Include="src\lve_model.hpp" />
     <ClInclude Include="src\first_app.hpp" />
     <ClInclude Include="src\lve_device.hpp" />
     <ClInclude Include="src\lve_pipeline.hpp" />
     <ClInclude Include="src\lve_window.hpp" />
     <ClInclude Include="src\lve_swap_chain.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="compile.bat" />
+    <None Include="delete_compiled.bat" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
