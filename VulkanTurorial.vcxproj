@@ -172,6 +172,7 @@ call compile.bat</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\keyboard_movement_controller.cpp" />
+    <ClCompile Include="src\lve_buffer.cpp" />
     <ClCompile Include="src\lve_camera.cpp" />
     <ClCompile Include="src\simple_render_system.cpp" />
     <ClCompile Include="src\lve_renderer.cpp" />
@@ -186,7 +187,9 @@ call compile.bat</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\keyboard_movement_controller.h" />
+    <ClInclude Include="src\lve_buffer.h" />
     <ClInclude Include="src\lve_camera.h" />
+    <ClInclude Include="src\lve_frame_info.h" />
     <ClInclude Include="src\lve_utils.h" />
     <ClInclude Include="src\simple_render_system.hpp" />
     <ClInclude Include="src\lve_renderer.hpp" />
